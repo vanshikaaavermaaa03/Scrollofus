@@ -93,6 +93,10 @@ const MainWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 const TeddyBear = styled(motion.div)`
@@ -106,6 +110,12 @@ const TeddyBear = styled(motion.div)`
   left: 60px;
   top: 50%;
   transform: translateY(-50%);
+
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 200px;
+    left: 20px;
+  }
 `;
 
 const SpeechBubble = styled(motion.div)`
@@ -123,6 +133,15 @@ const SpeechBubble = styled(motion.div)`
   opacity: 0;
   z-index: 3;
   text-align: center;
+
+  @media (max-width: 768px) {
+    left: 20px;
+    top: calc(50% - 150px);
+    font-size: 1.2rem;
+    padding: 1rem;
+    max-width: 250px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -131,6 +150,10 @@ const SpeechBubble = styled(motion.div)`
     border-width: 20px 20px 0;
     border-style: solid;
     border-color: white transparent;
+
+    @media (max-width: 768px) {
+      left: 30px;
+    }
   }
 `;
 
@@ -145,6 +168,13 @@ const Paper = styled(motion.div)`
   transform: scale(0.8);
   z-index: 2;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    max-width: 350px;
+    padding: 1.5rem;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -155,6 +185,10 @@ const Paper = styled(motion.div)`
     height: 40px;
     background: white;
     transform: rotate(45deg);
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `;
 
@@ -200,6 +234,11 @@ const Title = styled.h1`
   margin-bottom: 2rem;
   font-family: 'Arial, sans-serif';
   font-size: 2.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const Envelope = styled(motion.div)`
@@ -226,6 +265,14 @@ const Envelope = styled(motion.div)`
   left: 50%;
   transform: translate(-50%, -50%);
 
+  @media (max-width: 768px) {
+    width: 90%;
+    max-width: 350px;
+    height: 200px;
+    font-size: 1.2rem;
+    padding-top: 30px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -236,6 +283,12 @@ const Envelope = styled(motion.div)`
     border-right: 200px solid transparent;
     width: 0;
     height: 0;
+
+    @media (max-width: 768px) {
+      border-bottom: 100px solid #f0f0f0;
+      border-left: 175px solid transparent;
+      border-right: 175px solid transparent;
+    }
   }
 
   &::after {
@@ -250,6 +303,12 @@ const Envelope = styled(motion.div)`
     height: 0;
     transform-origin: top;
     transition: transform 0.5s ease-in-out;
+
+    @media (max-width: 768px) {
+      border-top: 100px solid #ddd;
+      border-left: 175px solid transparent;
+      border-right: 175px solid transparent;
+    }
   }
 
   ${({ showNote }) => showNote && `
@@ -304,6 +363,15 @@ const FloatingNote = styled(motion.div)`
   border: 2px solid #FFB6C1;
   background: linear-gradient(to bottom, #fff8dc, #fff0f5);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  @media (max-width: 768px) {
+    width: 90%;
+    max-width: 350px;
+    height: 200px;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    left: 50%;
+  }
 `;
 
 const Countdown = styled(motion.div)`
@@ -317,6 +385,10 @@ const Countdown = styled(motion.div)`
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 30;
   font-family: 'Arial', sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 6rem;
+  }
 `;
 
 const PartyBackground = styled(motion.div)`
@@ -336,6 +408,10 @@ const ImageContainer = styled.div`
   height: 100vh;
   overflow: hidden;
   z-index: 20;
+
+  @media (max-width: 768px) {
+    width: 150px;
+  }
 `;
 
 const LeftImageContainer = styled(ImageContainer)`
@@ -357,6 +433,11 @@ const ScrollingImage = styled(motion.img)`
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   opacity: 1;
   display: block;
+
+  @media (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 const BirthdayMessage = styled(motion.div)`
@@ -375,6 +456,13 @@ const BirthdayMessage = styled(motion.div)`
     1px 1px 0 white;
   font-family: 'Arial', sans-serif;
   white-space: nowrap;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    left: 50%;
+    white-space: normal;
+    width: 90%;
+  }
 `;
 
 const Balloon = styled(motion.div)`
@@ -401,27 +489,36 @@ const Balloon = styled(motion.div)`
 const GiftBox = styled(motion.div)`
   width: 150px;
   height: 150px;
-  background-color: #FF1493; /* Pink color for gift box */
+  background-color: #FF1493;
   border-radius: 10px;
   position: fixed;
   top: 50%;
   left: 45%;
-  transform: translate(-50%, -50%) scale(0.5); /* Start small */
+  transform: translate(-50%, -50%) scale(0.5);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   z-index: 30;
-  border: 5px solid #FFB6C1; /* Lighter pink border */
+  border: 5px solid #FFB6C1;
+
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 120px;
+  }
 
   &::before {
     content: '';
     position: absolute;
     width: 20px;
     height: 170px;
-    background-color: #FFB6C1; /* Ribbon color */
+    background-color: #FFB6C1;
     transform: translateX(-50%);
+
+    @media (max-width: 768px) {
+      height: 140px;
+    }
   }
 
   &::after {
@@ -429,8 +526,12 @@ const GiftBox = styled(motion.div)`
     position: absolute;
     width: 170px;
     height: 20px;
-    background-color: #FFB6C1; /* Ribbon color */
+    background-color: #FFB6C1;
     transform: translateY(-50%);
+
+    @media (max-width: 768px) {
+      width: 140px;
+    }
   }
 `;
 
@@ -463,15 +564,28 @@ const SoftToy = styled(motion.div)`
   top: 40%;
   z-index: 20;
   pointer-events: none;
+
+  @media (max-width: 768px) {
+    width: 280px;
+    height: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 
-// Add a styled component for the speech bubble next to the soft toy
 const SoftToyBubble = styled(SpeechBubble)`
   left: 40%;
   top: 10%;
   max-width: 320px;
   opacity: 1;
   z-index: 25;
+
+  @media (max-width: 768px) {
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    max-width: 280px;
+  }
 `;
 
 function App() {
