@@ -119,7 +119,8 @@ const TeddyBear = styled(motion.div)`
     height: 120px;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 15%;
+    top: 10%;
+    z-index: 5;
   }
 `;
 
@@ -141,12 +142,13 @@ const SpeechBubble = styled(motion.div)`
 
   @media (max-width: 768px) {
     left: 50%;
-    top: 25%;
+    top: 20%;
     transform: translateX(-50%);
     font-size: 1rem;
     padding: 1rem;
     max-width: 85%;
     width: 280px;
+    z-index: 6;
   }
 
   &::before {
@@ -183,7 +185,8 @@ const Paper = styled(motion.div)`
     width: 85%;
     max-width: 320px;
     padding: 1.2rem;
-    margin-top: 150px;
+    margin-top: 120px;
+    z-index: 4;
   }
 
   &::before {
@@ -296,6 +299,8 @@ const Envelope = styled(motion.div)`
     height: 180px;
     font-size: 1.1rem;
     padding-top: 30px;
+    top: 45%;
+    z-index: 7;
   }
 
   &::before {
@@ -396,7 +401,8 @@ const FloatingNote = styled(motion.div)`
     font-size: 1.1rem;
     padding: 1.2rem;
     left: 50%;
-    top: 50%;
+    top: 45%;
+    z-index: 8;
   }
 `;
 
@@ -415,6 +421,7 @@ const Countdown = styled(motion.div)`
   @media (max-width: 768px) {
     font-size: 5rem;
     top: 40%;
+    z-index: 9;
   }
 `;
 
@@ -438,6 +445,7 @@ const ImageContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 100px;
+    z-index: 10;
   }
 `;
 
@@ -490,7 +498,8 @@ const BirthdayMessage = styled(motion.div)`
     left: 50%;
     white-space: normal;
     width: 90%;
-    top: 40%;
+    top: 35%;
+    z-index: 11;
   }
 `;
 
@@ -536,6 +545,7 @@ const GiftBox = styled(motion.div)`
     width: 100px;
     height: 100px;
     top: 45%;
+    z-index: 12;
   }
 
   &::before {
@@ -573,15 +583,16 @@ const GiftBoxMessage = styled(SpeechBubble)`
   font-size: 1.8rem;
   padding: 1.2rem 2.2rem;
   max-width: 320px;
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: -20px;
+
+  @media (max-width: 768px) {
+    top: 25%;
     left: 50%;
-    border-width: 20px 20px 0;
-    border-style: solid;
-    border-color: #fff8dc transparent;
     transform: translateX(-50%);
+    font-size: 1.1rem;
+    padding: 1rem;
+    max-width: 85%;
+    width: 280px;
+    z-index: 13;
   }
 `;
 
@@ -601,6 +612,7 @@ const SoftToy = styled(motion.div)`
     left: 50%;
     top: 45%;
     transform: translateX(-50%);
+    z-index: 14;
   }
 `;
 
@@ -618,6 +630,7 @@ const SoftToyBubble = styled(SpeechBubble)`
     max-width: 85%;
     width: 280px;
     font-size: 1rem;
+    z-index: 15;
   }
 `;
 
