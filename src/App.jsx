@@ -95,10 +95,8 @@ const MainWrapper = styled.div`
   position: relative;
 
   @media (max-width: 768px) {
-    padding: 0;
-    min-height: 100vh;
+    padding: 1rem;
     min-height: -webkit-fill-available;
-    overflow-x: hidden;
   }
 `;
 
@@ -115,12 +113,11 @@ const TeddyBear = styled(motion.div)`
   transform: translateY(-50%);
 
   @media (max-width: 768px) {
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 1%;
-    z-index: 5;
+    top: 20%;
   }
 `;
 
@@ -142,13 +139,12 @@ const SpeechBubble = styled(motion.div)`
 
   @media (max-width: 768px) {
     left: 50%;
-    top: 12%;
+    top: 35%;
     transform: translateX(-50%);
-    font-size: 0.6rem;
-    padding: 0.3rem;
-    max-width: 98%;
-    width: 160px;
-    z-index: 6;
+    font-size: 1.2rem;
+    padding: 1rem;
+    max-width: 280px;
+    width: 90%;
   }
 
   &::before {
@@ -182,11 +178,10 @@ const Paper = styled(motion.div)`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    width: 95%;
-    max-width: 180px;
-    padding: 0.5rem;
-    margin-top: 120px;
-    z-index: 4;
+    width: 90%;
+    max-width: 320px;
+    padding: 1.5rem;
+    margin-top: 200px;
   }
 
   &::before {
@@ -222,9 +217,8 @@ const Input = styled.input`
   width: 100%;
 
   @media (max-width: 768px) {
-    padding: 0.3rem;
-    font-size: 0.6rem;
-    margin-bottom: 0.1rem;
+    padding: 0.8rem;
+    font-size: 0.9rem;
   }
 
   &:focus {
@@ -245,9 +239,8 @@ const Button = styled.button`
   width: 100%;
 
   @media (max-width: 768px) {
-    padding: 0.3rem;
-    font-size: 0.7rem;
-    margin-top: 0.1rem;
+    padding: 0.8rem;
+    font-size: 1rem;
   }
 
   &:hover {
@@ -264,8 +257,8 @@ const Title = styled.h1`
   font-size: 2.5rem;
 
   @media (max-width: 768px) {
-    font-size: 0.8rem;
-    margin-bottom: 0.4rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
   }
 `;
 
@@ -294,14 +287,56 @@ const Envelope = styled(motion.div)`
   transform: translate(-50%, -50%);
 
   @media (max-width: 768px) {
-    width: 95%;
-    max-width: 180px;
-    height: 80px;
-    font-size: 0.7rem;
-    padding-top: 5px;
-    top: 40%;
-    z-index: 7;
+    width: 90%;
+    max-width: 320px;
+    height: 200px;
+    font-size: 1.2rem;
+    padding-top: 30px;
   }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 150px solid #f0f0f0;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    width: 0;
+    height: 0;
+
+    @media (max-width: 768px) {
+      border-bottom: 100px solid #f0f0f0;
+      border-left: 160px solid transparent;
+      border-right: 160px solid transparent;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 150px solid #ddd;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    width: 0;
+    height: 0;
+    transform-origin: top;
+    transition: transform 0.5s ease-in-out;
+
+    @media (max-width: 768px) {
+      border-top: 100px solid #ddd;
+      border-left: 160px solid transparent;
+      border-right: 160px solid transparent;
+    }
+  }
+
+  ${({ showNote }) => showNote && `
+    &::after {
+      transform: rotateX(180deg);
+    }
+  `}
 `;
 
 const Note = styled(motion.div)`
@@ -351,14 +386,13 @@ const FloatingNote = styled(motion.div)`
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 
   @media (max-width: 768px) {
-    width: 95%;
-    max-width: 180px;
-    height: 80px;
-    font-size: 0.7rem;
-    padding: 0.5rem;
+    width: 90%;
+    max-width: 320px;
+    height: 200px;
+    font-size: 1.2rem;
+    padding: 1.5rem;
     left: 50%;
-    top: 40%;
-    z-index: 8;
+    top: 50%;
   }
 `;
 
@@ -375,9 +409,8 @@ const Countdown = styled(motion.div)`
   font-family: 'Arial', sans-serif;
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
-    top: 30%;
-    z-index: 9;
+    font-size: 6rem;
+    top: 40%;
   }
 `;
 
@@ -400,8 +433,7 @@ const ImageContainer = styled.div`
   z-index: 20;
 
   @media (max-width: 768px) {
-    width: 40px;
-    z-index: 10;
+    width: 120px;
   }
 `;
 
@@ -426,9 +458,9 @@ const ScrollingImage = styled(motion.img)`
   display: block;
 
   @media (max-width: 768px) {
-    width: 30px;
-    height: 30px;
-    margin: 0 auto 2px auto;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px auto;
   }
 `;
 
@@ -450,12 +482,11 @@ const BirthdayMessage = styled(motion.div)`
   white-space: nowrap;
 
   @media (max-width: 768px) {
-    font-size: 0.8rem;
+    font-size: 2rem;
     left: 50%;
     white-space: normal;
-    width: 95%;
-    top: 25%;
-    z-index: 11;
+    width: 90%;
+    top: 40%;
   }
 `;
 
@@ -498,10 +529,9 @@ const GiftBox = styled(motion.div)`
   border: 5px solid #FFB6C1;
 
   @media (max-width: 768px) {
-    width: 40px;
-    height: 40px;
-    top: 35%;
-    z-index: 12;
+    width: 120px;
+    height: 120px;
+    top: 45%;
   }
 
   &::before {
@@ -513,8 +543,7 @@ const GiftBox = styled(motion.div)`
     transform: translateX(-50%);
 
     @media (max-width: 768px) {
-      height: 40px;
-      width: 7px;
+      height: 140px;
     }
   }
 
@@ -527,8 +556,7 @@ const GiftBox = styled(motion.div)`
     transform: translateY(-50%);
 
     @media (max-width: 768px) {
-      width: 40px;
-      height: 7px;
+      width: 140px;
     }
   }
 `;
@@ -541,16 +569,15 @@ const GiftBoxMessage = styled(SpeechBubble)`
   font-size: 1.8rem;
   padding: 1.2rem 2.2rem;
   max-width: 320px;
-
-  @media (max-width: 768px) {
-    top: 15%;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
     left: 50%;
+    border-width: 20px 20px 0;
+    border-style: solid;
+    border-color: #fff8dc transparent;
     transform: translateX(-50%);
-    font-size: 0.6rem;
-    padding: 0.3rem;
-    max-width: 98%;
-    width: 160px;
-    z-index: 13;
   }
 `;
 
@@ -565,12 +592,11 @@ const SoftToy = styled(motion.div)`
   pointer-events: none;
 
   @media (max-width: 768px) {
-    width: 80px;
-    height: 80px;
+    width: 280px;
+    height: 280px;
     left: 50%;
-    top: 35%;
+    top: 45%;
     transform: translateX(-50%);
-    z-index: 14;
   }
 `;
 
@@ -583,12 +609,10 @@ const SoftToyBubble = styled(SpeechBubble)`
 
   @media (max-width: 768px) {
     left: 50%;
-    top: 10%;
+    top: 5%;
     transform: translateX(-50%);
-    max-width: 98%;
-    width: 160px;
-    font-size: 0.6rem;
-    z-index: 15;
+    max-width: 280px;
+    width: 90%;
   }
 `;
 
@@ -652,11 +676,11 @@ function App() {
       console.log('Correct DOB entered! Proceeding to surprise.');
       setShowForm(false);
       setShowSpeech(false);
-      // Add a longer delay for mobile
+      // Add a slight delay before showing the envelope and its speech bubble
       setTimeout(() => {
         setShowEnvelope(true);
         setShowEnvelopeSpeech(true);
-      }, 800);
+      }, 500);
     } else {
       alert('Incorrect date. Please try again!');
       console.log('Incorrect DOB entered:', formData.dob);
@@ -674,12 +698,12 @@ function App() {
     setShowEnvelope(false);
     setTimeout(() => {
       setShowFloatingNote(true);
-    }, 800);
+    }, 500);
   };
 
   const handleNoteClick = () => {
     setShowFloatingNote(false);
-    setShowSpeech(false);
+    setShowSpeech(false); // Hide speech bubble
     setShowCountdown(true);
     let count = 5;
     const timer = setInterval(() => {
@@ -688,9 +712,7 @@ function App() {
       if (count === 0) {
         clearInterval(timer);
         setShowCountdown(false);
-        setTimeout(() => {
-          setShowParty(true);
-        }, 500);
+        setShowParty(true);
       }
     }, 1000);
   };
@@ -710,12 +732,10 @@ function App() {
     ));
   };
 
-  // Update the handleGiftBoxClick function for mobile
+  // Add handler for gift box click
   const handleGiftBoxClick = () => {
     setShowSoftToy(true);
-    setTimeout(() => {
-      setShowGiftBox(false);
-    }, 500);
+    setShowGiftBox(false); // Hide gift box and speech bubble
   };
 
   return (
