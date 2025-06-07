@@ -115,11 +115,11 @@ const TeddyBear = styled(motion.div)`
   transform: translateY(-50%);
 
   @media (max-width: 768px) {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 10%;
+    top: 5%;
     z-index: 5;
   }
 `;
@@ -142,12 +142,12 @@ const SpeechBubble = styled(motion.div)`
 
   @media (max-width: 768px) {
     left: 50%;
-    top: 20%;
+    top: 15%;
     transform: translateX(-50%);
-    font-size: 1rem;
-    padding: 1rem;
+    font-size: 0.9rem;
+    padding: 0.8rem;
     max-width: 85%;
-    width: 280px;
+    width: 260px;
     z-index: 6;
   }
 
@@ -183,9 +183,9 @@ const Paper = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 85%;
-    max-width: 320px;
-    padding: 1.2rem;
-    margin-top: 120px;
+    max-width: 300px;
+    padding: 1rem;
+    margin-top: 100px;
     z-index: 4;
   }
 
@@ -295,57 +295,13 @@ const Envelope = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 85%;
-    max-width: 280px;
-    height: 180px;
-    font-size: 1.1rem;
-    padding-top: 30px;
-    top: 45%;
+    max-width: 260px;
+    height: 160px;
+    font-size: 1rem;
+    padding-top: 25px;
+    top: 40%;
     z-index: 7;
   }
-
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-bottom: 150px solid #f0f0f0;
-    border-left: 200px solid transparent;
-    border-right: 200px solid transparent;
-    width: 0;
-    height: 0;
-
-    @media (max-width: 768px) {
-      border-bottom: 90px solid #f0f0f0;
-      border-left: 140px solid transparent;
-      border-right: 140px solid transparent;
-    }
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-top: 150px solid #ddd;
-    border-left: 200px solid transparent;
-    border-right: 200px solid transparent;
-    width: 0;
-    height: 0;
-    transform-origin: top;
-    transition: transform 0.5s ease-in-out;
-
-    @media (max-width: 768px) {
-      border-top: 90px solid #ddd;
-      border-left: 140px solid transparent;
-      border-right: 140px solid transparent;
-    }
-  }
-
-  ${({ showNote }) => showNote && `
-    &::after {
-      transform: rotateX(180deg);
-    }
-  `}
 `;
 
 const Note = styled(motion.div)`
@@ -396,12 +352,12 @@ const FloatingNote = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 85%;
-    max-width: 280px;
-    height: 180px;
-    font-size: 1.1rem;
-    padding: 1.2rem;
+    max-width: 260px;
+    height: 160px;
+    font-size: 1rem;
+    padding: 1rem;
     left: 50%;
-    top: 45%;
+    top: 40%;
     z-index: 8;
   }
 `;
@@ -419,8 +375,8 @@ const Countdown = styled(motion.div)`
   font-family: 'Arial', sans-serif;
 
   @media (max-width: 768px) {
-    font-size: 5rem;
-    top: 40%;
+    font-size: 4rem;
+    top: 35%;
     z-index: 9;
   }
 `;
@@ -444,7 +400,7 @@ const ImageContainer = styled.div`
   z-index: 20;
 
   @media (max-width: 768px) {
-    width: 100px;
+    width: 80px;
     z-index: 10;
   }
 `;
@@ -494,11 +450,11 @@ const BirthdayMessage = styled(motion.div)`
   white-space: nowrap;
 
   @media (max-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     left: 50%;
     white-space: normal;
     width: 90%;
-    top: 35%;
+    top: 30%;
     z-index: 11;
   }
 `;
@@ -542,36 +498,10 @@ const GiftBox = styled(motion.div)`
   border: 5px solid #FFB6C1;
 
   @media (max-width: 768px) {
-    width: 100px;
-    height: 100px;
-    top: 45%;
+    width: 80px;
+    height: 80px;
+    top: 40%;
     z-index: 12;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 170px;
-    background-color: #FFB6C1;
-    transform: translateX(-50%);
-
-    @media (max-width: 768px) {
-      height: 120px;
-    }
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 170px;
-    height: 20px;
-    background-color: #FFB6C1;
-    transform: translateY(-50%);
-
-    @media (max-width: 768px) {
-      width: 120px;
-    }
   }
 `;
 
@@ -585,13 +515,13 @@ const GiftBoxMessage = styled(SpeechBubble)`
   max-width: 320px;
 
   @media (max-width: 768px) {
-    top: 25%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.1rem;
-    padding: 1rem;
+    font-size: 0.9rem;
+    padding: 0.8rem;
     max-width: 85%;
-    width: 280px;
+    width: 260px;
     z-index: 13;
   }
 `;
@@ -607,10 +537,10 @@ const SoftToy = styled(motion.div)`
   pointer-events: none;
 
   @media (max-width: 768px) {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     left: 50%;
-    top: 45%;
+    top: 40%;
     transform: translateX(-50%);
     z-index: 14;
   }
@@ -628,8 +558,8 @@ const SoftToyBubble = styled(SpeechBubble)`
     top: 5%;
     transform: translateX(-50%);
     max-width: 85%;
-    width: 280px;
-    font-size: 1rem;
+    width: 260px;
+    font-size: 0.9rem;
     z-index: 15;
   }
 `;
@@ -694,11 +624,11 @@ function App() {
       console.log('Correct DOB entered! Proceeding to surprise.');
       setShowForm(false);
       setShowSpeech(false);
-      // Add a slight delay before showing the envelope and its speech bubble
+      // Add a longer delay for mobile
       setTimeout(() => {
         setShowEnvelope(true);
         setShowEnvelopeSpeech(true);
-      }, 500);
+      }, 800);
     } else {
       alert('Incorrect date. Please try again!');
       console.log('Incorrect DOB entered:', formData.dob);
@@ -716,12 +646,12 @@ function App() {
     setShowEnvelope(false);
     setTimeout(() => {
       setShowFloatingNote(true);
-    }, 500);
+    }, 800);
   };
 
   const handleNoteClick = () => {
     setShowFloatingNote(false);
-    setShowSpeech(false); // Hide speech bubble
+    setShowSpeech(false);
     setShowCountdown(true);
     let count = 5;
     const timer = setInterval(() => {
@@ -730,7 +660,9 @@ function App() {
       if (count === 0) {
         clearInterval(timer);
         setShowCountdown(false);
-        setShowParty(true);
+        setTimeout(() => {
+          setShowParty(true);
+        }, 500);
       }
     }, 1000);
   };
@@ -750,10 +682,12 @@ function App() {
     ));
   };
 
-  // Add handler for gift box click
+  // Update the handleGiftBoxClick function for mobile
   const handleGiftBoxClick = () => {
     setShowSoftToy(true);
-    setShowGiftBox(false); // Hide gift box and speech bubble
+    setTimeout(() => {
+      setShowGiftBox(false);
+    }, 500);
   };
 
   return (
