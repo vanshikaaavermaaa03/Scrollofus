@@ -95,8 +95,10 @@ const MainWrapper = styled.div`
   position: relative;
 
   @media (max-width: 768px) {
-    padding: 1rem;
+    padding: 0;
+    min-height: 100vh;
     min-height: -webkit-fill-available;
+    overflow-x: hidden;
   }
 `;
 
@@ -113,11 +115,11 @@ const TeddyBear = styled(motion.div)`
   transform: translateY(-50%);
 
   @media (max-width: 768px) {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 20%;
+    top: 15%;
   }
 `;
 
@@ -139,12 +141,12 @@ const SpeechBubble = styled(motion.div)`
 
   @media (max-width: 768px) {
     left: 50%;
-    top: 35%;
+    top: 25%;
     transform: translateX(-50%);
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1rem;
-    max-width: 280px;
-    width: 90%;
+    max-width: 85%;
+    width: 280px;
   }
 
   &::before {
@@ -178,10 +180,10 @@ const Paper = styled(motion.div)`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 85%;
     max-width: 320px;
-    padding: 1.5rem;
-    margin-top: 200px;
+    padding: 1.2rem;
+    margin-top: 150px;
   }
 
   &::before {
@@ -219,6 +221,7 @@ const Input = styled.input`
   @media (max-width: 768px) {
     padding: 0.8rem;
     font-size: 0.9rem;
+    margin-bottom: 0.5rem;
   }
 
   &:focus {
@@ -241,6 +244,7 @@ const Button = styled.button`
   @media (max-width: 768px) {
     padding: 0.8rem;
     font-size: 1rem;
+    margin-top: 0.5rem;
   }
 
   &:hover {
@@ -257,8 +261,8 @@ const Title = styled.h1`
   font-size: 2.5rem;
 
   @media (max-width: 768px) {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -287,10 +291,10 @@ const Envelope = styled(motion.div)`
   transform: translate(-50%, -50%);
 
   @media (max-width: 768px) {
-    width: 90%;
-    max-width: 320px;
-    height: 200px;
-    font-size: 1.2rem;
+    width: 85%;
+    max-width: 280px;
+    height: 180px;
+    font-size: 1.1rem;
     padding-top: 30px;
   }
 
@@ -306,9 +310,9 @@ const Envelope = styled(motion.div)`
     height: 0;
 
     @media (max-width: 768px) {
-      border-bottom: 100px solid #f0f0f0;
-      border-left: 160px solid transparent;
-      border-right: 160px solid transparent;
+      border-bottom: 90px solid #f0f0f0;
+      border-left: 140px solid transparent;
+      border-right: 140px solid transparent;
     }
   }
 
@@ -326,9 +330,9 @@ const Envelope = styled(motion.div)`
     transition: transform 0.5s ease-in-out;
 
     @media (max-width: 768px) {
-      border-top: 100px solid #ddd;
-      border-left: 160px solid transparent;
-      border-right: 160px solid transparent;
+      border-top: 90px solid #ddd;
+      border-left: 140px solid transparent;
+      border-right: 140px solid transparent;
     }
   }
 
@@ -386,11 +390,11 @@ const FloatingNote = styled(motion.div)`
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 
   @media (max-width: 768px) {
-    width: 90%;
-    max-width: 320px;
-    height: 200px;
-    font-size: 1.2rem;
-    padding: 1.5rem;
+    width: 85%;
+    max-width: 280px;
+    height: 180px;
+    font-size: 1.1rem;
+    padding: 1.2rem;
     left: 50%;
     top: 50%;
   }
@@ -409,7 +413,7 @@ const Countdown = styled(motion.div)`
   font-family: 'Arial', sans-serif;
 
   @media (max-width: 768px) {
-    font-size: 6rem;
+    font-size: 5rem;
     top: 40%;
   }
 `;
@@ -433,7 +437,7 @@ const ImageContainer = styled.div`
   z-index: 20;
 
   @media (max-width: 768px) {
-    width: 120px;
+    width: 100px;
   }
 `;
 
@@ -458,8 +462,8 @@ const ScrollingImage = styled(motion.img)`
   display: block;
 
   @media (max-width: 768px) {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto 10px auto;
   }
 `;
@@ -482,7 +486,7 @@ const BirthdayMessage = styled(motion.div)`
   white-space: nowrap;
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
     left: 50%;
     white-space: normal;
     width: 90%;
@@ -529,8 +533,8 @@ const GiftBox = styled(motion.div)`
   border: 5px solid #FFB6C1;
 
   @media (max-width: 768px) {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     top: 45%;
   }
 
@@ -543,7 +547,7 @@ const GiftBox = styled(motion.div)`
     transform: translateX(-50%);
 
     @media (max-width: 768px) {
-      height: 140px;
+      height: 120px;
     }
   }
 
@@ -556,7 +560,7 @@ const GiftBox = styled(motion.div)`
     transform: translateY(-50%);
 
     @media (max-width: 768px) {
-      width: 140px;
+      width: 120px;
     }
   }
 `;
@@ -592,8 +596,8 @@ const SoftToy = styled(motion.div)`
   pointer-events: none;
 
   @media (max-width: 768px) {
-    width: 280px;
-    height: 280px;
+    width: 200px;
+    height: 200px;
     left: 50%;
     top: 45%;
     transform: translateX(-50%);
@@ -611,8 +615,9 @@ const SoftToyBubble = styled(SpeechBubble)`
     left: 50%;
     top: 5%;
     transform: translateX(-50%);
-    max-width: 280px;
-    width: 90%;
+    max-width: 85%;
+    width: 280px;
+    font-size: 1rem;
   }
 `;
 
