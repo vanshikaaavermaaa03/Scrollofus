@@ -1,6 +1,17 @@
 [build]
+<<<<<<< HEAD
   command = "npm run build"
   publish = "build"
+=======
+  command = "npm ci && npm run build"
+  publish = "dist"
+  base = "/"
+
+[build.environment]
+  NODE_VERSION = "18.17.0"
+  NPM_FLAGS = "--legacy-peer-deps"
+  NPM_CONFIG_PRODUCTION = "false"
+>>>>>>> c6f8c6f342e588b9dc560aee76cf9cf5b33628e9
 
 [[redirects]]
   from = "/*"

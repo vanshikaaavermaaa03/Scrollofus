@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Body -->
+  <circle cx="256" cy="256" r="200" fill="#A0522D"/>
+  <!-- Head -->
+  <circle cx="256" cy="180" r="120" fill="#A0522D"/>
+  <!-- Left Ear -->
+  <circle cx="160" cy="120" r="50" fill="#8B4513"/>
+  <!-- Right Ear -->
+  <circle cx="352" cy="120" r="50" fill="#8B4513"/>
+  <!-- Left Eye -->
+  <circle cx="200" cy="160" r="20" fill="white"/>
+  <circle cx="200" cy="160" r="10" fill="black"/>
+  <!-- Right Eye -->
+  <circle cx="312" cy="160" r="20" fill="white"/>
+  <circle cx="312" cy="160" r="10" fill="black"/>
+  <!-- Nose -->
+  <circle cx="256" cy="200" r="25" fill="black"/>
+  <!-- Mouth -->
+  <path d="M220 240 Q256 280 292 240" stroke="black" stroke-width="8" fill="none"/>
+  <!-- Left Arm -->
+  <circle cx="120" cy="300" r="40" fill="#8B4513"/>
+  <!-- Right Arm -->
+  <circle cx="392" cy="300" r="40" fill="#8B4513"/>
+  <!-- Left Leg -->
+  <circle cx="180" cy="420" r="50" fill="#8B4513"/>
+  <!-- Right Leg -->
+  <circle cx="332" cy="420" r="50" fill="#8B4513"/>
+</svg> 
