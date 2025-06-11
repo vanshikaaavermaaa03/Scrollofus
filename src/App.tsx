@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import styled from '@emotion/styled';
+import { motion, AnimatePresence } from 'framer-motion';
+import TeddyBear from './components/TeddyBear';
+import LoginForm from './components/LoginForm';
+import PartyBackground from './components/PartyBackground';
+import GiftBox from './components/GiftBox';
 
-function App() {
+const AppContainer = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+`;
+
+const ContentContainer = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+`;
+
+const App: React.FC = () => {
+  const [showGift, setShowGift] = useState(false);
+
+  const handleCorrectDOB = () => {
+    setShowGift(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <PartyBackground />
+      <AppContainer>
+        <AnimatePresence mode="wait">
+          {!showGift ? (
+            <ContentContainer
+              key="login"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <TeddyBear />
+              <LoginForm onCorrectDOB={handleCorrectDOB} />
+            </ContentContainer>
+          ) : (
+            <GiftBox />
+          )}
+        </AnimatePresence>
+      </AppContainer>
+    </>
   );
-}
+};
 
 export default App;
